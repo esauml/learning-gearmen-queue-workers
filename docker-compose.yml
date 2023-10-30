@@ -1,0 +1,11 @@
+# service artefactual/gearmand:latest
+
+services:
+  gearmand-server:
+    image: artefactual/gearmand:latest
+    platform: linux/amd64
+    ports:
+      - "4730:4730"
+    volumes:
+      - ./server:/var/lib/gearman
+    restart: always
